@@ -17,7 +17,12 @@ stages {
     stage('Build (Maven)') {
         steps {
             sh '''
-            docker run --rm -v "$PWD":/workspace -w /workspace/eureka-server maven:3.9.9-eclipse-temurin-17 mvn clean package -DskipTests
+            echo "Current workspace: ${WORKSPACE}"
+            echo "Checking eureka-server directory..."
+            ls -la ${WORKSPACE}/eureka-server/ || echo "Directory not found"
+            echo "Checking for pom.xml..."
+            ls -la ${WORKSPACE}/eureka-server/pom.xml || echo "pom.xml not found"
+            docker run --rm -v "${WORKSPACE}":/workspace -w /workspace/eureka-server maven:3.9.9-eclipse-temurin-17 mvn clean package -DskipTests
             '''
         }
     }
