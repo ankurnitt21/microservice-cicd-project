@@ -1,56 +1,83 @@
 pipeline {
 
-    agent any
+agent any
 
-    stages {
+environment {
+    IMAGE_NAME = "eureka-server"
+}
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
+stages {
+
+    stage('Checkout') {
+        steps {
+            checkout scm
         }
-
-        stage('Detect Branch') {
-            steps {
-                script {
-                    echo "Current branch: ${env.GIT_BRANCH}"
-                }
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo "Building project"
-            }
-        }
-
-        stage('Deploy to TEST') {
-            when {
-                expression { env.GIT_BRANCH.contains("develop") }
-            }
-            steps {
-                echo "Deploying to TEST environment"
-            }
-        }
-
-        stage('Deploy to STAGING') {
-            when {
-                expression { env.GIT_BRANCH.contains("release") }
-            }
-            steps {
-                echo "Deploying to STAGING"
-            }
-        }
-
-        stage('Deploy to PROD') {
-            when {
-                expression { env.GIT_BRANCH.contains("main") }
-            }
-            steps {
-                echo "Deploying to PRODUCTION"
-            }
-        }
-
     }
+
+    stage('Build (Maven)') {
+        steps {
+            dir('eureka-server') {
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+    }
+
+    stage('Build Docker Image') {
+        steps {
+            sh '''
+            docker build -t $IMAGE_NAME:latest ./eureka-server
+            '''
+        }
+    }
+
+    stage('Deploy to TEST') {
+        when {
+            branch 'develop'
+        }
+        steps {
+            sh '''
+            docker stop eureka-test || true
+            docker rm eureka-test || true
+
+            docker run -d -p 8761:8761 \
+            --name eureka-test \
+            $IMAGE_NAME:latest
+            '''
+        }
+    }
+
+    stage('Deploy to STAGING') {
+        when {
+            branch pattern: "release/.*", comparator: "REGEXP"
+        }
+        steps {
+            sh '''
+            docker stop eureka-staging || true
+            docker rm eureka-staging || true
+
+            docker run -d -p 8762:8761 \
+            --name eureka-staging \
+            $IMAGE_NAME:latest
+            '''
+        }
+    }
+
+    stage('Deploy to PRODUCTION') {
+        when {
+            branch 'main'
+        }
+        steps {
+            sh '''
+            docker stop eureka-prod || true
+            docker rm eureka-prod || true
+
+            docker run -d -p 8763:8761 \
+            --name eureka-prod \
+            $IMAGE_NAME:latest
+            '''
+        }
+    }
+
+}
 
 }
