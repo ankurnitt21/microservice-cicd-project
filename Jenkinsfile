@@ -22,7 +22,11 @@ stages {
             ls -la ${WORKSPACE}/eureka-server/ || echo "Directory not found"
             echo "Checking for pom.xml..."
             ls -la ${WORKSPACE}/eureka-server/pom.xml || echo "pom.xml not found"
-            docker run --rm -v "${WORKSPACE}":/workspace -w /workspace/eureka-server maven:3.9.9-eclipse-temurin-17 mvn clean package -DskipTests
+            echo "Checking what's inside the container..."
+            docker run --rm -v "${WORKSPACE}":/workspace maven:3.9.9-eclipse-temurin-17 ls -la /workspace/eureka-server/ || echo "Container directory check failed"
+            docker run --rm -v "${WORKSPACE}":/workspace maven:3.9.9-eclipse-temurin-17 test -f /workspace/eureka-server/pom.xml && echo "pom.xml exists in container" || echo "pom.xml NOT found in container"
+            echo "Running Maven build..."
+            docker run --rm -v "${WORKSPACE}":/workspace -w /workspace/eureka-server maven:3.9.9-eclipse-temurin-17 mvn -f /workspace/eureka-server/pom.xml clean package -DskipTests
             '''
         }
     }
