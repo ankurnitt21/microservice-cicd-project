@@ -1,0 +1,27 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Pipeline Test') {
+            steps {
+                echo "Eureka CI pipeline working"
+            }
+        }
+
+        stage('Check Docker') {
+            steps {
+                sh 'docker version'
+            }
+        }
+
+    }
+
+}
