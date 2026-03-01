@@ -21,7 +21,8 @@ stages {
             echo "Building eureka-server with Maven using tar copy method..."
             cd ${WORKSPACE}/eureka-server
             # Copy files into container, build, and copy target directory back using tar streams
-            tar -czf - . | docker run --rm -i maven:3.9.9-eclipse-temurin-17 sh -c "tar -xzf - && mvn clean package -DskipTests && tar -czf - target/" | tar -xzf - -C ${WORKSPACE}/eureka-server/
+            # Maven stdout is redirected to stderr (1>&2) to keep stdout clean for the tar pipe
+            tar -czf - . | docker run --rm -i maven:3.9.9-eclipse-temurin-17 sh -c "tar -xzf - && mvn clean package -DskipTests 1>&2 && tar -czf - target/" | tar -xzf - -C ${WORKSPACE}/eureka-server/
             echo "Maven build completed. Checking for JAR file..."
             ls -lh ${WORKSPACE}/eureka-server/target/*.jar || echo "JAR file not found"
             '''
