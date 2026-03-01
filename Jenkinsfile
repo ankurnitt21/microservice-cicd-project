@@ -10,38 +10,47 @@ pipeline {
             }
         }
 
+        stage('Detect Branch') {
+            steps {
+                script {
+                    echo "Current branch: ${env.GIT_BRANCH}"
+                }
+            }
+        }
+
         stage('Build') {
             steps {
                 echo "Building project"
             }
         }
 
-        stage('Test Environment') {
+        stage('Deploy to TEST') {
             when {
-                branch 'develop'
+                expression { env.GIT_BRANCH.contains("develop") }
             }
             steps {
-                echo "Deploy to TEST"
+                echo "Deploying to TEST environment"
             }
         }
 
-        stage('Staging Environment') {
+        stage('Deploy to STAGING') {
             when {
-                branch 'release/*'
+                expression { env.GIT_BRANCH.contains("release") }
             }
             steps {
-                echo "Deploy to STAGING"
+                echo "Deploying to STAGING"
             }
         }
 
-        stage('Production Environment') {
+        stage('Deploy to PROD') {
             when {
-                branch 'main'
+                expression { env.GIT_BRANCH.contains("main") }
             }
             steps {
-                echo "Deploy to PRODUCTION"
+                echo "Deploying to PRODUCTION"
             }
         }
 
     }
+
 }
