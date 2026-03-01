@@ -17,15 +17,10 @@ stages {
     stage('Build (Maven)') {
         steps {
             sh '''
-            docker run --rm 
-            -v $(pwd):/workspace 
-            -w /workspace/eureka-server 
-            maven:3.9.9-eclipse-temurin-17 
-            mvn clean package -DskipTests
+            docker run --rm -v "$PWD":/workspace -w /workspace/eureka-server maven:3.9.9-eclipse-temurin-17 mvn clean package -DskipTests
             '''
         }
     }
-
 
     stage('Build Docker Image') {
         steps {
@@ -44,9 +39,7 @@ stages {
             docker stop eureka-test || true
             docker rm eureka-test || true
 
-            docker run -d -p 8761:8761 \
-            --name eureka-test \
-            $IMAGE_NAME:latest
+            docker run -d -p 8761:8761 --name eureka-test $IMAGE_NAME:latest
             '''
         }
     }
@@ -60,9 +53,7 @@ stages {
             docker stop eureka-staging || true
             docker rm eureka-staging || true
 
-            docker run -d -p 8762:8761 \
-            --name eureka-staging \
-            $IMAGE_NAME:latest
+            docker run -d -p 8762:8761 --name eureka-staging $IMAGE_NAME:latest
             '''
         }
     }
@@ -76,9 +67,7 @@ stages {
             docker stop eureka-prod || true
             docker rm eureka-prod || true
 
-            docker run -d -p 8763:8761 \
-            --name eureka-prod \
-            $IMAGE_NAME:latest
+            docker run -d -p 8763:8761 --name eureka-prod $IMAGE_NAME:latest
             '''
         }
     }
