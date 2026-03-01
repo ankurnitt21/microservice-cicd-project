@@ -18,10 +18,12 @@ stages {
         steps {
             sh '''
             echo "Current workspace: ${WORKSPACE}"
-            echo "Building eureka-server with Maven..."
+            echo "Building eureka-server with Maven using tar copy method..."
             cd ${WORKSPACE}/eureka-server
-            # Try mounting the directory directly
-            docker run --rm -v "${WORKSPACE}/eureka-server":/workspace -w /workspace maven:3.9.9-eclipse-temurin-17 sh -c "ls -la && mvn clean package -DskipTests"
+            # Copy files into container, build, and copy target directory back using tar streams
+            tar -czf - . | docker run --rm -i maven:3.9.9-eclipse-temurin-17 sh -c "tar -xzf - && mvn clean package -DskipTests && tar -czf - target/" | tar -xzf - -C ${WORKSPACE}/eureka-server/
+            echo "Maven build completed. Checking for JAR file..."
+            ls -lh ${WORKSPACE}/eureka-server/target/*.jar || echo "JAR file not found"
             '''
         }
     }
