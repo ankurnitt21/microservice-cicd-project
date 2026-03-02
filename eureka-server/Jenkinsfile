@@ -16,7 +16,10 @@ pipeline {
 
         stage('Build (Maven)') {
             when {
-                changeset "eureka-server/**"
+                anyOf {
+                    changeset "eureka-server/**"
+                    expression { currentBuild.previousBuild == null }
+                }
             }
             steps {
                 sh '''
@@ -34,7 +37,10 @@ pipeline {
 
         stage('Build Docker Image') {
             when {
-                changeset "eureka-server/**"
+                anyOf {
+                    changeset "eureka-server/**"
+                    expression { currentBuild.previousBuild == null }
+                }
             }
             steps {
                 sh '''
@@ -47,7 +53,10 @@ pipeline {
             when {
                 allOf {
                     branch 'develop'
-                    changeset "eureka-server/**"
+                    anyOf {
+                        changeset "eureka-server/**"
+                        expression { currentBuild.previousBuild == null }
+                    }
                 }
             }
             steps {
@@ -63,7 +72,10 @@ pipeline {
             when {
                 allOf {
                     branch pattern: "release/.*", comparator: "REGEXP"
-                    changeset "eureka-server/**"
+                    anyOf {
+                        changeset "eureka-server/**"
+                        expression { currentBuild.previousBuild == null }
+                    }
                 }
             }
             steps {
@@ -79,7 +91,10 @@ pipeline {
             when {
                 allOf {
                     branch 'main'
-                    changeset "eureka-server/**"
+                    anyOf {
+                        changeset "eureka-server/**"
+                        expression { currentBuild.previousBuild == null }
+                    }
                 }
             }
             steps {
