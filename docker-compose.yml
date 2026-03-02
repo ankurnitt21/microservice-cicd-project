@@ -1,0 +1,231 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  Microservice CI/CD Project — Docker Compose
+#
+#  Services and their startup order:
+#
+#    1. kafka          — Message broker (KRaft mode, no Zookeeper needed)
+#    2. eureka-server  — Service registry (port 8761)
+#    3. config-server  — Centralised config (port 8888)  [needs eureka]
+#    4. product-service — Products API (port 8082)        [needs eureka, config]
+#    5. order-service  — Orders API (port 8083)           [needs eureka, config, product, kafka]
+#    6. payment-service — Kafka consumer (port 8084)      [needs eureka, config, kafka]
+#    7. api-gateway    — Entry point (port 8080)          [needs eureka, config, product, order]
+#
+#  Run everything:
+#    docker-compose up --build
+#
+#  Run in background:
+#    docker-compose up --build -d
+#
+#  Stop and remove containers + volumes:
+#    docker-compose down -v
+#
+#  View logs of a specific service:
+#    docker-compose logs -f order-service
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ─── Kafka (KRaft mode — no Zookeeper) ──────────────────────────────────────
+  kafka:
+    image: apache/kafka:latest   # Official Apache Kafka image — KRaft built-in
+    container_name: kafka
+    ports:
+      - "9092:9092"     # Internal Docker network — used by all Spring services
+      - "9094:9094"     # External — connect from your host machine (e.g. Kafka UI, kafkacat)
+    environment:
+      # KRaft — single node acting as both broker and controller
+      KAFKA_NODE_ID: "1"
+      KAFKA_PROCESS_ROLES: "broker,controller"
+      # Listeners:
+      #   PLAINTEXT  — internal Docker traffic  (kafka:9092)
+      #   EXTERNAL   — host machine access      (localhost:9094)
+      #   CONTROLLER — KRaft controller         (kafka:9093)
+      KAFKA_LISTENERS: "PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0.0:9094"
+      KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:9092,EXTERNAL://localhost:9094"
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT"
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"
+      KAFKA_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      KAFKA_INTER_BROKER_LISTENER_NAME: "PLAINTEXT"
+      # Topic defaults for single-node cluster
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: "1"
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: "0"
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - microservices-net
+
+  # ─── Eureka Server — Service Registry ───────────────────────────────────────
+  eureka-server:
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      # No overrides needed — eureka-server doesn't register with itself
+      JAVA_OPTS: "-Xms128m -Xmx256m"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8761/actuator/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - microservices-net
+
+  # ─── Config Server — Centralised Configuration ───────────────────────────────
+  config-server:
+    build:
+      context: ./config-server
+      dockerfile: Dockerfile
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    environment:
+      # Override eureka URL to use Docker service name instead of localhost
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      JAVA_OPTS: "-Xms128m -Xmx256m"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8888/actuator/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - microservices-net
+
+  # ─── Product Service ─────────────────────────────────────────────────────────
+  product-service:
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile
+    container_name: product-service
+    ports:
+      - "8082:8082"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:8888
+      JAVA_OPTS: "-Xms128m -Xmx256m"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      config-server:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8082/actuator/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - microservices-net
+
+  # ─── Order Service ────────────────────────────────────────────────────────────
+  order-service:
+    build:
+      context: ./order-service
+      dockerfile: Dockerfile
+    container_name: order-service
+    ports:
+      - "8083:8083"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:8888
+      # Override Kafka bootstrap server to use Docker service name
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      JAVA_OPTS: "-Xms128m -Xmx256m"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      config-server:
+        condition: service_healthy
+      product-service:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8083/actuator/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - microservices-net
+
+  # ─── Payment Service — Kafka Consumer ────────────────────────────────────────
+  payment-service:
+    build:
+      context: ./payment-service
+      dockerfile: Dockerfile
+    container_name: payment-service
+    ports:
+      - "8084:8084"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:8888
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      JAVA_OPTS: "-Xms128m -Xmx256m"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      config-server:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8084/actuator/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - microservices-net
+
+  # ─── API Gateway — Single Entry Point ────────────────────────────────────────
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:8888
+      JAVA_OPTS: "-Xms128m -Xmx256m"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      config-server:
+        condition: service_healthy
+      product-service:
+        condition: service_healthy
+      order-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/actuator/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - microservices-net
+
+# ─── Shared Network ───────────────────────────────────────────────────────────
+# All services communicate using service names (e.g. kafka:9092, eureka-server:8761)
+# on this bridge network.
+networks:
+  microservices-net:
+    driver: bridge

@@ -1,0 +1,361 @@
+2026-03-02 15:55:52.550 [] [] [] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-02 15:55:52.627 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 11256 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 15:55:52.628 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:55:52.630 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:55:55.364 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 15:55:56.918 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 5.442 seconds (process running for 6.492)
+2026-03-02 15:56:35.411 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Ankur Rana, productId=1, qty=2
+2026-03-02 15:56:35.411 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Ankur Rana, productId=1, quantity=2
+2026-03-02 15:56:35.412 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=1
+2026-03-02 15:56:35.436 [] [] [] DEBUG com.example.order_service.service.OrderService - product-service response: name=MacBook Pro, price=150000.0, available=true
+2026-03-02 15:56:35.437 [] [] [] INFO  com.example.order_service.service.OrderService - Order created — id=1, product=MacBook Pro, qty=2, total=300000.0, status=CONFIRMED
+2026-03-02 15:56:35.437 [] [] [] INFO  com.example.order_service.controller.OrderController - Order placed: id=1, total=300000.0
+2026-03-02 15:56:35.563 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: GET /api/orders
+2026-03-02 15:56:35.564 [] [] [] DEBUG com.example.order_service.service.OrderService - Fetching all orders — count=1
+2026-03-02 15:56:35.564 [] [] [] INFO  com.example.order_service.controller.OrderController - Returning 1 order(s)
+2026-03-02 15:56:35.582 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: GET /api/orders/1
+2026-03-02 15:56:35.582 [] [] [] DEBUG com.example.order_service.service.OrderService - Looking up order id=1
+2026-03-02 15:56:35.582 [] [] [] INFO  com.example.order_service.controller.OrderController - Found order: id=1, status=CONFIRMED
+2026-03-02 15:56:35.588 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Ankur Rana, productId=999, qty=1
+2026-03-02 15:56:35.588 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Ankur Rana, productId=999, quantity=1
+2026-03-02 15:56:35.588 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=999
+2026-03-02 15:56:35.603 [] [] [] WARN  com.example.order_service.exception.GlobalExceptionHandler - Product not found in product-service: [404] during [GET] to [http://localhost:8082/api/products/999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 999","status":404}]
+2026-03-02 15:56:35.614 [] [] [] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8082/api/products/999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 999","status":404}]]
+2026-03-02 15:56:45.038 [] [] [] WARN  com.example.order_service.exception.GlobalExceptionHandler - Validation failed: {quantity=Quantity is required, productId=Product ID is required, customerName=Customer name is required}
+2026-03-02 15:56:45.041 [] [] [] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.order_service.model.Order> com.example.order_service.controller.OrderController.createOrder(com.example.order_service.dto.CreateOrderRequest) with 3 errors: [Field error in object 'createOrderRequest' on field 'productId': rejected value [null]; codes [NotNull.createOrderRequest.productId,NotNull.productId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createOrderRequest.productId,productId]; arguments []; default message [productId]]; default message [Product ID is required]] [Field error in object 'createOrderRequest' on field 'customerName': rejected value [null]; codes [NotBlank.createOrderRequest.customerName,NotBlank.customerName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createOrderRequest.customerName,customerName]; arguments []; default message [customerName]]; default message [Customer name is required]] [Field error in object 'createOrderRequest' on field 'quantity': rejected value [null]; codes [NotNull.createOrderRequest.quantity,NotNull.quantity,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createOrderRequest.quantity,quantity]; arguments []; default message [quantity]]; default message [Quantity is required]] ]
+2026-03-02 15:56:45.154 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Test User, productId=2, qty=1
+2026-03-02 15:56:45.154 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Test User, productId=2, quantity=1
+2026-03-02 15:56:45.155 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=2
+2026-03-02 15:56:45.162 [] [] [] DEBUG com.example.order_service.service.OrderService - product-service response: name=Out of Stock Item, price=500.0, available=false
+2026-03-02 15:56:45.162 [] [] [] WARN  com.example.order_service.service.OrderService - Product id=2 is not available
+2026-03-02 15:56:45.163 [] [] [] WARN  com.example.order_service.exception.GlobalExceptionHandler - Product not available: Product with id 2 is not available for purchase
+2026-03-02 15:56:45.165 [] [] [] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [com.example.order_service.exception.ProductNotAvailableException: Product with id 2 is not available for purchase]
+2026-03-02 16:10:38.094 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 11256 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:10:38.095 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:10:38.096 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:10:40.150 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:10:41.068 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 3.7 seconds (process running for 890.644)
+2026-03-02 16:10:46.295 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 11256 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:10:46.295 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:10:46.296 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:10:47.583 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:10:47.601 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler': Lookup method resolution failed
+2026-03-02 16:10:47.602 [] [] [] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:294)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:267)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:460)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1163)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:114)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:735)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:692)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1401)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:651)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1394)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:640)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.order_service.OrderServiceApplication.main(OrderServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-03-02 16:10:47.682 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.order_service.OrderServiceApplication.main(OrderServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.order_service.exception.GlobalExceptionHandler] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@abf7e5d]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/github/resilience4j/circuitbreaker/CallNotPermittedException
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.github.resilience4j.circuitbreaker.CallNotPermittedException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 32 common frames omitted
+2026-03-02 16:11:04.334 [] [] [] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-02 16:11:04.422 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 20608 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:11:04.423 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:11:04.425 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:11:09.134 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:11:12.029 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 8.763 seconds (process running for 9.93)
+2026-03-02 16:11:39.850 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Alice, productId=3, qty=2
+2026-03-02 16:11:39.865 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Alice, productId=3, quantity=2
+2026-03-02 16:11:39.865 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=3
+2026-03-02 16:11:39.894 [] [] [] DEBUG com.example.order_service.service.OrderService - product-service response: name=MacBook Pro, price=150000.0, available=true
+2026-03-02 16:11:39.896 [] [] [] INFO  com.example.order_service.service.OrderService - Order created — id=1, product=MacBook Pro, qty=2, total=300000.0, status=CONFIRMED
+2026-03-02 16:11:39.899 [] [] [] INFO  com.example.order_service.controller.OrderController - Order placed: id=1, total=300000.0
+2026-03-02 16:12:24.524 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Bob, productId=99999, qty=1
+2026-03-02 16:12:24.524 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Bob, productId=99999, quantity=1
+2026-03-02 16:12:24.525 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=99999
+2026-03-02 16:12:24.534 [] [] [] ERROR com.example.order_service.service.OrderService - Fallback triggered for createOrder — customer=Bob, productId=99999, reason=[404] during [GET] to [http://localhost:8082/api/products/99999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 99999","status":404}]
+2026-03-02 16:12:24.541 [] [] [] WARN  com.example.order_service.exception.GlobalExceptionHandler - Product not found in product-service: [404] during [GET] to [http://localhost:8082/api/products/99999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 99999","status":404}]
+2026-03-02 16:12:24.547 [] [] [] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8082/api/products/99999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 99999","status":404}]]
+2026-03-02 16:12:30.752 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Bob, productId=99999, qty=1
+2026-03-02 16:12:30.753 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Bob, productId=99999, quantity=1
+2026-03-02 16:12:30.753 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=99999
+2026-03-02 16:12:30.760 [] [] [] ERROR com.example.order_service.service.OrderService - Fallback triggered for createOrder — customer=Bob, productId=99999, reason=[404] during [GET] to [http://localhost:8082/api/products/99999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 99999","status":404}]
+2026-03-02 16:12:30.761 [] [] [] WARN  com.example.order_service.exception.GlobalExceptionHandler - Product not found in product-service: [404] during [GET] to [http://localhost:8082/api/products/99999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 99999","status":404}]
+2026-03-02 16:12:30.762 [] [] [] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8082/api/products/99999] [ProductClient#getProductById(Long)]: [{"message":"Product Not found with id: 99999","status":404}]]
+2026-03-02 16:12:40.229 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Bob, productId=4, qty=1
+2026-03-02 16:12:40.231 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Bob, productId=4, quantity=1
+2026-03-02 16:12:40.231 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=4
+2026-03-02 16:12:40.235 [] [] [] DEBUG com.example.order_service.service.OrderService - product-service response: name=Sold Out Item, price=999.0, available=false
+2026-03-02 16:12:40.235 [] [] [] WARN  com.example.order_service.service.OrderService - Product id=4 is not available
+2026-03-02 16:12:40.235 [] [] [] ERROR com.example.order_service.service.OrderService - Fallback triggered for createOrder — customer=Bob, productId=4, reason=Product with id 4 is not available for purchase
+2026-03-02 16:12:40.235 [] [] [] WARN  com.example.order_service.exception.GlobalExceptionHandler - Product not available: Product with id 4 is not available for purchase
+2026-03-02 16:12:40.236 [] [] [] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [com.example.order_service.exception.ProductNotAvailableException: Product with id 4 is not available for purchase]
+2026-03-02 16:24:15.329 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 11256 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:24:15.330 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:24:15.331 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:24:16.212 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 20608 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:24:16.213 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:24:16.214 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:24:17.748 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:24:19.598 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 5.298 seconds (process running for 1709.173)
+2026-03-02 16:24:26.832 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 11256 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:24:26.834 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:24:26.834 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:24:27.080 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:24:28.650 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+2026-03-02 16:24:28.698 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.order_service.OrderServiceApplication.main(OrderServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.order_service.aspect.ServiceTimingAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6920baf1]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/ProceedingJoinPoint
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.ProceedingJoinPoint
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 32 common frames omitted
+2026-03-02 16:24:28.964 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 13.469 seconds (process running for 806.866)
+2026-03-02 16:24:29.876 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 20608 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:24:29.877 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:24:29.878 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:24:32.332 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:24:32.349 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [D:\Projects\microservice-cicd-project\order-service\target\classes\com\example\order_service\controller\OrderController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'orderService' defined in file [D:\Projects\microservice-cicd-project\order-service\target\classes\com\example\order_service\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.example.order_service.client.ProductClient': FactoryBean threw exception on object creation
+2026-03-02 16:24:32.349 [] [] [] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:294)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:267)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:460)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1163)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:114)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:735)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:692)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1401)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:651)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1394)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:640)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.order_service.OrderServiceApplication.main(OrderServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-03-02 16:24:32.404 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [D:\Projects\microservice-cicd-project\order-service\target\classes\com\example\order_service\controller\OrderController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'orderService' defined in file [D:\Projects\microservice-cicd-project\order-service\target\classes\com\example\order_service\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.example.order_service.client.ProductClient': FactoryBean threw exception on object creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.order_service.OrderServiceApplication.main(OrderServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService' defined in file [D:\Projects\microservice-cicd-project\order-service\target\classes\com\example\order_service\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.example.order_service.client.ProductClient': FactoryBean threw exception on object creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1606)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.order_service.client.ProductClient': FactoryBean threw exception on object creation
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:192)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:125)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1884)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:349)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1664)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 39 common frames omitted
+Caused by: java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:436)
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:481)
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:456)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:186)
+	... 49 common frames omitted
+2026-03-02 16:28:19.987 [] [] [] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-02 16:28:20.110 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 17.0.16 with PID 9808 (D:\Projects\microservice-cicd-project\order-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\order-service)
+2026-03-02 16:28:20.112 [] [] [] DEBUG com.example.order_service.OrderServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:28:20.114 [] [] [] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:28:26.866 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:28:32.826 [] [] [] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-02 16:28:33.108 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-03-02 16:28:33.114 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:28:33.142 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-03-02 16:28:33.143 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-03-02 16:28:33.144 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-03-02 16:28:33.144 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2026-03-02 16:28:33.144 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-03-02 16:28:33.144 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-03-02 16:28:33.144 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-03-02 16:28:33.775 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2026-03-02 16:28:33.778 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-03-02 16:28:33.781 [] [] [] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-02 16:28:33.785 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1772449113784 with initial instances count: 2
+2026-03-02 16:28:33.837 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1772449113837, current=UP, previous=STARTING]
+2026-03-02 16:28:33.844 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_ORDER-SERVICE/order-service:8083: registering service...
+2026-03-02 16:28:33.957 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_ORDER-SERVICE/order-service:8083 - registration status: 204
+2026-03-02 16:28:34.266 [] [] [] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 16.53 seconds (process running for 17.788)
+2026-03-02 16:29:49.064 [] [] [] INFO  com.example.order_service.controller.OrderController - Request received: POST /api/orders — customer=Ankur, productId=1, qty=1
+2026-03-02 16:29:49.082 [] [] [] INFO  com.example.order_service.service.OrderService - Creating order — customer=Ankur, productId=1, quantity=1
+2026-03-02 16:29:49.083 [] [] [] DEBUG com.example.order_service.service.OrderService - Calling product-service for productId=1
+2026-03-02 16:29:49.217 [] [] [] DEBUG com.example.order_service.service.OrderService - product-service response: name=iPhone 16, price=89999.0, available=true
+2026-03-02 16:29:49.219 [] [] [] INFO  com.example.order_service.service.OrderService - Order created — id=1, product=iPhone 16, qty=1, total=89999.0, status=CONFIRMED
+2026-03-02 16:29:49.221 [] [] [] DEBUG com.example.order_service.aspect.ServiceTimingAspect - [AOP] OrderService.createOrder() completed in 139ms
+2026-03-02 16:29:49.227 [] [] [] INFO  com.example.order_service.controller.OrderController - Order placed: id=1, total=89999.0
+2026-03-02 16:29:49.241 [] [] [] INFO  com.example.order_service.interceptor.PerformanceInterceptor - [PERF] POST /api/orders ? 201 | 306ms
+2026-03-02 16:33:33.153 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:38:33.166 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:43:33.170 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:48:33.180 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:53:33.197 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:58:33.201 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 17:03:33.216 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

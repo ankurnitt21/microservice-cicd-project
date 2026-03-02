@@ -1,0 +1,85 @@
+<configuration>
+
+    <!--
+        LOCAL profile — human-readable coloured console output.
+        Pattern includes MDC values via %X{key}.
+
+        Example output:
+          15:22:01.450 [abc-1234] [POST] [/api/products] INFO  ProductController - Product created: id=1, name=Laptop
+    -->
+    <springProfile name="default,local">
+
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%d{HH:mm:ss.SSS} [%X{requestId}] [%X{method}] [%X{uri}] %-5level %logger{36} - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <!-- Rolling file — rotate daily, keep 7 days -->
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>logs/product-service.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>logs/product-service.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>7</maxHistory>
+                <totalSizeCap>200MB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{requestId}] [%X{method}] [%X{uri}] %-5level %logger - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <!-- ERROR-only file — separate file just for errors -->
+        <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>logs/product-service-errors.log</file>
+            <!-- Only write ERROR level -->
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>logs/product-service-errors.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>30</maxHistory>
+            </rollingPolicy>
+            <encoder>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{requestId}] [%X{method}] [%X{uri}] ERROR %logger - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <!-- Your application code — DEBUG level (see service internals) -->
+        <logger name="com.example.product_service" level="DEBUG"/>
+
+        <!-- Silence noisy Spring/framework logs -->
+        <logger name="org.springframework" level="WARN"/>
+        <logger name="org.apache" level="WARN"/>
+        <logger name="org.hibernate" level="WARN"/>
+
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="ERROR_FILE"/>
+        </root>
+
+    </springProfile>
+
+    <!--
+        PROD profile — JSON structured output for ELK / Splunk ingestion.
+        Every log line is a JSON object. MDC fields become top-level keys.
+        Activate with: SPRING_PROFILES_ACTIVE=prod
+    -->
+    <springProfile name="prod">
+
+        <appender name="JSON_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="ch.qos.logback.classic.encoder.JsonEncoder"/>
+        </appender>
+
+        <logger name="com.example.product_service" level="INFO"/>
+        <logger name="org.springframework" level="WARN"/>
+
+        <root level="INFO">
+            <appender-ref ref="JSON_CONSOLE"/>
+        </root>
+
+    </springProfile>
+
+</configuration>

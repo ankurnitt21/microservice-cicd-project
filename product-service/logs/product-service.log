@@ -1,0 +1,1033 @@
+2026-03-02 15:34:17.508 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:34:17.509 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:34:17.509 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:34:18.069 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.782 seconds (process running for 286.248)
+2026-03-02 15:34:26.971 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:34:26.971 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:34:26.971 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:34:27.478 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.553 seconds (process running for 295.658)
+2026-03-02 15:34:55.376 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:34:55.377 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:34:55.378 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:34:56.761 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 1.585 seconds (process running for 324.941)
+2026-03-02 15:35:01.325 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:35:01.328 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:35:01.329 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:35:02.357 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 1.206 seconds (process running for 330.536)
+2026-03-02 15:35:05.837 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 21620 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:35:05.840 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:35:05.842 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:35:09.175 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 15:35:09.200 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-02 15:35:09.251 [] [] [] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2026-03-02 15:35:18.626 [fe5b3a4f] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: POST /api/products — name=Laptop, price=75000.0
+2026-03-02 15:35:18.628 [fe5b3a4f] [POST] [/api/products] DEBUG com.example.product_service.service.ProductService - Saved product to store: id=1, name=Laptop, price=75000.0
+2026-03-02 15:35:18.628 [fe5b3a4f] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Product created: id=1, name=Laptop
+2026-03-02 15:35:50.680 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:35:50.681 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:35:50.681 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:35:51.027 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.374 seconds (process running for 379.206)
+2026-03-02 15:47:29.533 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:47:29.533 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:47:29.533 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:47:30.021 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.518 seconds (process running for 1078.2)
+2026-03-02 15:47:34.701 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:47:34.701 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:47:34.701 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:47:35.098 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.423 seconds (process running for 1083.278)
+2026-03-02 15:47:50.193 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:47:50.194 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:47:50.196 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:47:50.219 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 15:47:50.242 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 15:48:01.818 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:48:01.818 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:48:01.818 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:48:01.832 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 15:48:01.835 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 15:48:10.891 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:48:10.891 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:48:10.891 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:48:11.535 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.749 seconds (process running for 1119.714)
+2026-03-02 15:48:16.138 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:48:16.138 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:48:16.138 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:48:16.168 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 15:48:16.171 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 15:48:34.972 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:48:34.974 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:48:34.975 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:48:38.519 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 15:48:38.626 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 4.502 seconds (process running for 5.241)
+2026-03-02 15:49:17.452 [a6f6d63d] [GET] [/actuator/health] DEBUG com.example.product_service.service.ProductService - Fetching all products from store — current count: 0
+2026-03-02 15:49:17.454 [a6f6d63d] [GET] [/actuator/health] DEBUG com.example.product_service.health.ProductStoreHealthIndicator - Health check — product store size: 0
+2026-03-02 15:49:33.775 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:49:33.776 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:49:33.776 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:49:33.789 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 15:49:33.793 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 15:49:34.925 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:49:34.925 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:49:34.925 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:49:35.876 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 15:49:35.939 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 1.05 seconds (process running for 62.555)
+2026-03-02 15:51:10.815 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:51:10.816 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:51:10.816 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:51:10.863 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 15:51:10.879 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 15:51:11.341 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:51:11.341 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:51:11.341 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:51:12.118 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 15:51:12.171 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.92 seconds (process running for 158.788)
+2026-03-02 15:51:24.560 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:51:24.560 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:51:24.561 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:51:24.590 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 15:51:24.598 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 15:51:25.116 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 15:51:25.117 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 15:51:25.117 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 15:51:25.769 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 15:51:25.805 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.736 seconds (process running for 172.422)
+2026-03-02 15:56:24.414 [49978f31] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: POST /api/products — name=MacBook Pro, price=150000.0
+2026-03-02 15:56:24.415 [49978f31] [POST] [/api/products] DEBUG com.example.product_service.service.ProductService - Saved product to store: id=1, name=MacBook Pro, price=150000.0
+2026-03-02 15:56:24.415 [49978f31] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Product created: id=1, name=MacBook Pro
+2026-03-02 15:56:35.424 [ee7f0dfb] [GET] [/api/products/1] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/1
+2026-03-02 15:56:35.424 [ee7f0dfb] [GET] [/api/products/1] DEBUG com.example.product_service.service.ProductService - Looking up product by id=1
+2026-03-02 15:56:35.424 [ee7f0dfb] [GET] [/api/products/1] INFO  com.example.product_service.Controller.ProductController - Found product: id=1, name=MacBook Pro
+2026-03-02 15:56:35.590 [973c7792] [GET] [/api/products/999] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/999
+2026-03-02 15:56:35.591 [973c7792] [GET] [/api/products/999] DEBUG com.example.product_service.service.ProductService - Looking up product by id=999
+2026-03-02 15:56:35.591 [973c7792] [GET] [/api/products/999] DEBUG com.example.product_service.service.ProductService - Cache miss — no product found for id=999
+2026-03-02 15:56:35.591 [973c7792] [GET] [/api/products/999] WARN  com.example.product_service.Controller.ProductController - Product not found: id=999
+2026-03-02 15:56:35.597 [973c7792] [GET] [/api/products/999] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [com.example.product_service.exception.ProductNotFoundException: Product Not found with id: 999]
+2026-03-02 15:56:45.063 [aa7866be] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: POST /api/products — name=Out of Stock Item, price=500.0
+2026-03-02 15:56:45.064 [aa7866be] [POST] [/api/products] DEBUG com.example.product_service.service.ProductService - Saved product to store: id=2, name=Out of Stock Item, price=500.0
+2026-03-02 15:56:45.064 [aa7866be] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Product created: id=2, name=Out of Stock Item
+2026-03-02 15:56:45.157 [82ad6fef] [GET] [/api/products/2] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/2
+2026-03-02 15:56:45.157 [82ad6fef] [GET] [/api/products/2] DEBUG com.example.product_service.service.ProductService - Looking up product by id=2
+2026-03-02 15:56:45.157 [82ad6fef] [GET] [/api/products/2] INFO  com.example.product_service.Controller.ProductController - Found product: id=2, name=Out of Stock Item
+2026-03-02 16:11:39.618 [e973f5bd] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: POST /api/products — name=MacBook Pro, price=150000.0
+2026-03-02 16:11:39.618 [e973f5bd] [POST] [/api/products] DEBUG com.example.product_service.service.ProductService - Saved product to store: id=3, name=MacBook Pro, price=150000.0
+2026-03-02 16:11:39.618 [e973f5bd] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Product created: id=3, name=MacBook Pro
+2026-03-02 16:11:39.879 [836e3faf] [GET] [/api/products/3] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/3
+2026-03-02 16:11:39.879 [836e3faf] [GET] [/api/products/3] DEBUG com.example.product_service.service.ProductService - Looking up product by id=3
+2026-03-02 16:11:39.879 [836e3faf] [GET] [/api/products/3] INFO  com.example.product_service.Controller.ProductController - Found product: id=3, name=MacBook Pro
+2026-03-02 16:12:24.527 [0217abbd] [GET] [/api/products/99999] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/99999
+2026-03-02 16:12:24.527 [0217abbd] [GET] [/api/products/99999] DEBUG com.example.product_service.service.ProductService - Looking up product by id=99999
+2026-03-02 16:12:24.527 [0217abbd] [GET] [/api/products/99999] DEBUG com.example.product_service.service.ProductService - Cache miss — no product found for id=99999
+2026-03-02 16:12:24.527 [0217abbd] [GET] [/api/products/99999] WARN  com.example.product_service.Controller.ProductController - Product not found: id=99999
+2026-03-02 16:12:24.530 [0217abbd] [GET] [/api/products/99999] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [com.example.product_service.exception.ProductNotFoundException: Product Not found with id: 99999]
+2026-03-02 16:12:30.755 [4517b7bd] [GET] [/api/products/99999] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/99999
+2026-03-02 16:12:30.756 [4517b7bd] [GET] [/api/products/99999] DEBUG com.example.product_service.service.ProductService - Looking up product by id=99999
+2026-03-02 16:12:30.756 [4517b7bd] [GET] [/api/products/99999] DEBUG com.example.product_service.service.ProductService - Cache miss — no product found for id=99999
+2026-03-02 16:12:30.757 [4517b7bd] [GET] [/api/products/99999] WARN  com.example.product_service.Controller.ProductController - Product not found: id=99999
+2026-03-02 16:12:30.758 [4517b7bd] [GET] [/api/products/99999] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [com.example.product_service.exception.ProductNotFoundException: Product Not found with id: 99999]
+2026-03-02 16:12:40.143 [cf72c7bb] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: POST /api/products — name=Sold Out Item, price=999.0
+2026-03-02 16:12:40.144 [cf72c7bb] [POST] [/api/products] DEBUG com.example.product_service.service.ProductService - Saved product to store: id=4, name=Sold Out Item, price=999.0
+2026-03-02 16:12:40.144 [cf72c7bb] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Product created: id=4, name=Sold Out Item
+2026-03-02 16:12:40.233 [54099c93] [GET] [/api/products/4] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/4
+2026-03-02 16:12:40.233 [54099c93] [GET] [/api/products/4] DEBUG com.example.product_service.service.ProductService - Looking up product by id=4
+2026-03-02 16:12:40.233 [54099c93] [GET] [/api/products/4] INFO  com.example.product_service.Controller.ProductController - Found product: id=4, name=Sold Out Item
+2026-03-02 16:17:40.184 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:17:40.184 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:17:40.184 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:17:40.210 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 16:17:40.213 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 16:17:40.934 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:17:40.934 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:17:40.934 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:17:42.251 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:17:42.371 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 1.497 seconds (process running for 1748.988)
+2026-03-02 16:17:48.845 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:17:48.845 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:17:48.845 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:17:48.878 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 16:17:48.883 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 16:17:49.173 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:17:49.173 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:17:49.174 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:17:50.060 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:17:50.124 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 0.998 seconds (process running for 1756.74)
+2026-03-02 16:17:57.463 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:17:57.464 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:17:57.464 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:17:57.495 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 16:17:57.499 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 16:17:57.960 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:17:57.960 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:17:57.961 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:17:58.942 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:17:59.009 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 1.106 seconds (process running for 1765.626)
+2026-03-02 16:18:15.949 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:18:15.949 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:18:15.949 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:18:16.274 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:18:16.275 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:18:16.275 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:18:16.317 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 16:18:16.326 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 16:18:16.869 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+2026-03-02 16:18:16.934 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.product_service.aspect.ServiceTimingAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@78e8824e]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/ProceedingJoinPoint
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.ProceedingJoinPoint
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 32 common frames omitted
+2026-03-02 16:18:27.636 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:18:27.638 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:18:27.638 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:18:28.044 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:18:28.044 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:18:28.044 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:18:28.085 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 16:18:28.096 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 16:18:28.719 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+2026-03-02 16:18:28.792 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.product_service.aspect.ServiceTimingAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@10a24f4b]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/ProceedingJoinPoint
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.ProceedingJoinPoint
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 32 common frames omitted
+2026-03-02 16:23:39.772 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:23:39.772 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:23:39.772 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:23:40.116 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:23:40.117 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:23:40.118 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:23:41.207 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 1.584 seconds (process running for 3249.387)
+2026-03-02 16:23:42.485 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:23:42.679 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-02 16:23:43.025 [] [] [] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2026-03-02 16:23:51.912 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:23:51.915 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:23:51.918 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:23:52.728 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:23:52.728 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:23:52.729 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:23:52.785 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 16:23:52.797 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 16:23:53.291 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+2026-03-02 16:23:53.333 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.product_service.aspect.ServiceTimingAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1c89817f]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/ProceedingJoinPoint
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.ProceedingJoinPoint
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 32 common frames omitted
+2026-03-02 16:27:33.959 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 14592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:27:34.066 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:27:34.067 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:27:42.370 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:27:42.884 [] [] [] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-02 16:27:43.202 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-03-02 16:27:43.215 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:27:43.246 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-03-02 16:27:43.247 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-03-02 16:27:43.247 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-03-02 16:27:43.247 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2026-03-02 16:27:43.247 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-03-02 16:27:43.248 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-03-02 16:27:43.248 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-03-02 16:27:44.213 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2026-03-02 16:27:44.219 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-03-02 16:27:44.229 [] [] [] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-02 16:27:44.232 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1772449064232 with initial instances count: 1
+2026-03-02 16:27:44.282 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1772449064282, current=UP, previous=STARTING]
+2026-03-02 16:27:44.289 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_PRODUCT-SERVICE/product-service:8082: registering service...
+2026-03-02 16:27:44.423 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_PRODUCT-SERVICE/product-service:8082 - registration status: 204
+2026-03-02 16:27:45.000 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 13.699 seconds (process running for 15.418)
+2026-03-02 16:28:03.661 [811610ac] [GET] [/actuator/health] DEBUG com.example.product_service.service.ProductService - Fetching all products from store — current count: 0
+2026-03-02 16:28:03.662 [811610ac] [GET] [/actuator/health] DEBUG com.example.product_service.aspect.ServiceTimingAspect - [AOP] ProductService.getAllProducts() completed in 1ms
+2026-03-02 16:28:03.663 [811610ac] [GET] [/actuator/health] DEBUG com.example.product_service.health.ProductStoreHealthIndicator - Health check — product store size: 0
+2026-03-02 16:29:34.860 [95fe7a25] [GET] [/actuator/health] DEBUG com.example.product_service.service.ProductService - Fetching all products from store — current count: 0
+2026-03-02 16:29:34.860 [95fe7a25] [GET] [/actuator/health] DEBUG com.example.product_service.aspect.ServiceTimingAspect - [AOP] ProductService.getAllProducts() completed in 1ms
+2026-03-02 16:29:34.860 [95fe7a25] [GET] [/actuator/health] DEBUG com.example.product_service.health.ProductStoreHealthIndicator - Health check — product store size: 0
+2026-03-02 16:29:48.715 [ecfaf3f0] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: POST /api/products — name=iPhone 16, price=89999.0
+2026-03-02 16:29:48.717 [ecfaf3f0] [POST] [/api/products] DEBUG com.example.product_service.service.ProductService - Saved product to store: id=1, name=iPhone 16, price=89999.0
+2026-03-02 16:29:48.717 [ecfaf3f0] [POST] [/api/products] DEBUG com.example.product_service.aspect.ServiceTimingAspect - [AOP] ProductService.createProduct() completed in 0ms
+2026-03-02 16:29:48.717 [ecfaf3f0] [POST] [/api/products] INFO  com.example.product_service.Controller.ProductController - Product created: id=1, name=iPhone 16
+2026-03-02 16:29:48.728 [ecfaf3f0] [POST] [/api/products] INFO  com.example.product_service.interceptor.PerformanceInterceptor - [PERF] POST /api/products ? 201 | 116ms
+2026-03-02 16:29:48.857 [74c2542b] [GET] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products
+2026-03-02 16:29:48.859 [74c2542b] [GET] [/api/products] DEBUG com.example.product_service.service.ProductService - Fetching all products from store — current count: 1
+2026-03-02 16:29:48.859 [74c2542b] [GET] [/api/products] DEBUG com.example.product_service.aspect.ServiceTimingAspect - [AOP] ProductService.getAllProducts() completed in 0ms
+2026-03-02 16:29:48.859 [74c2542b] [GET] [/api/products] INFO  com.example.product_service.Controller.ProductController - Returning 1 product(s)
+2026-03-02 16:29:48.862 [74c2542b] [GET] [/api/products] INFO  com.example.product_service.interceptor.PerformanceInterceptor - [PERF] GET /api/products ? 200 | 6ms
+2026-03-02 16:29:49.205 [7f665b1c] [GET] [/api/products/1] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products/1
+2026-03-02 16:29:49.206 [7f665b1c] [GET] [/api/products/1] DEBUG com.example.product_service.service.ProductService - Looking up product by id=1
+2026-03-02 16:29:49.206 [7f665b1c] [GET] [/api/products/1] DEBUG com.example.product_service.aspect.ServiceTimingAspect - [AOP] ProductService.getProductById() completed in 0ms
+2026-03-02 16:29:49.206 [7f665b1c] [GET] [/api/products/1] INFO  com.example.product_service.Controller.ProductController - Found product: id=1, name=iPhone 16
+2026-03-02 16:29:49.209 [7f665b1c] [GET] [/api/products/1] INFO  com.example.product_service.interceptor.PerformanceInterceptor - [PERF] GET /api/products/1 ? 200 | 9ms
+2026-03-02 16:30:02.379 [863302e7] [GET] [/api/products] INFO  com.example.product_service.Controller.ProductController - Request received: GET /api/products
+2026-03-02 16:30:02.379 [863302e7] [GET] [/api/products] DEBUG com.example.product_service.service.ProductService - Fetching all products from store — current count: 1
+2026-03-02 16:30:02.380 [863302e7] [GET] [/api/products] DEBUG com.example.product_service.aspect.ServiceTimingAspect - [AOP] ProductService.getAllProducts() completed in 1ms
+2026-03-02 16:30:02.380 [863302e7] [GET] [/api/products] INFO  com.example.product_service.Controller.ProductController - Returning 1 product(s)
+2026-03-02 16:30:02.381 [863302e7] [GET] [/api/products] INFO  com.example.product_service.interceptor.PerformanceInterceptor - [PERF] GET /api/products ? 200 | 2ms
+2026-03-02 16:32:06.161 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 20744 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:32:06.164 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:32:06.164 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:32:06.423 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1772449326423, current=DOWN, previous=UP]
+2026-03-02 16:32:06.428 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_PRODUCT-SERVICE/product-service:8082: registering service...
+2026-03-02 16:32:06.453 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_PRODUCT-SERVICE/product-service:8082 - registration status: 204
+2026-03-02 16:32:06.578 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 18592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:32:06.580 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:32:06.580 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:32:06.627 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+2026-03-02 16:32:06.638 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.example.product_service.health.ProductStoreHealthIndicator]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:272)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:205)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:340)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/boot/actuate/health/HealthIndicator.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:697)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1046)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	... 23 common frames omitted
+2026-03-02 16:32:06.951 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-03-02 16:32:07.237 [] [] [] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+2026-03-02 16:32:07.265 [] [] [] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceTimingAspect': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.product_service.ProductServiceApplication.main(ProductServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.product_service.aspect.ServiceTimingAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4ed23303]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/ProceedingJoinPoint
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.ProceedingJoinPoint
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 32 common frames omitted
+2026-03-02 16:32:09.967 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-03-02 16:32:09.988 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_PRODUCT-SERVICE/product-service:8082 - deregister  status: 200
+2026-03-02 16:32:09.989 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-03-02 16:32:10.338 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Starting ProductServiceApplication using Java 17.0.16 with PID 14592 (D:\Projects\microservice-cicd-project\product-service\target\classes started by ranaa in D:\Projects\microservice-cicd-project\product-service)
+2026-03-02 16:32:10.339 [] [] [] DEBUG com.example.product_service.ProductServiceApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-03-02 16:32:10.339 [] [] [] INFO  com.example.product_service.ProductServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:32:12.520 [] [] [] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-02 16:32:12.795 [] [] [] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-02 16:32:12.841 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-03-02 16:32:12.841 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:32:12.842 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-03-02 16:32:12.842 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-03-02 16:32:12.842 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-03-02 16:32:12.842 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2026-03-02 16:32:12.842 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-03-02 16:32:12.842 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-03-02 16:32:12.842 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-03-02 16:32:12.883 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2026-03-02 16:32:12.884 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-03-02 16:32:12.884 [] [] [] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-02 16:32:12.885 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1772449332885 with initial instances count: 4
+2026-03-02 16:32:12.892 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1772449332892, current=UP, previous=STARTING]
+2026-03-02 16:32:12.892 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_PRODUCT-SERVICE/product-service:8082: registering service...
+2026-03-02 16:32:12.906 [] [] [] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_PRODUCT-SERVICE/product-service:8082 - registration status: 204
+2026-03-02 16:32:13.118 [] [] [] INFO  com.example.product_service.ProductServiceApplication - Started ProductServiceApplication in 3.058 seconds (process running for 283.535)
+2026-03-02 16:37:12.857 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:42:12.861 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:47:12.867 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:52:12.881 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 16:57:12.890 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-03-02 17:02:12.895 [] [] [] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

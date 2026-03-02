@@ -1,0 +1,48 @@
+<configuration>
+
+    <springProfile name="default,local">
+
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%d{HH:mm:ss.SSS} [%X{requestId}] [%X{method}] [%X{uri}] %-5level %logger{36} - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>logs/order-service.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>logs/order-service.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>7</maxHistory>
+                <totalSizeCap>200MB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{requestId}] [%X{method}] [%X{uri}] %-5level %logger - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <!-- Your code: DEBUG level (see Feign calls + service internals) -->
+        <logger name="com.example.order_service" level="DEBUG"/>
+        <!-- Feign HTTP logs (shows GET http://localhost:8082/api/products/1 → 200) -->
+        <logger name="com.example.order_service.client" level="DEBUG"/>
+        <!-- Silence noisy framework logs -->
+        <logger name="org.springframework" level="WARN"/>
+        <logger name="org.apache" level="WARN"/>
+
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="FILE"/>
+        </root>
+
+    </springProfile>
+
+    <springProfile name="prod">
+        <appender name="JSON_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="ch.qos.logback.classic.encoder.JsonEncoder"/>
+        </appender>
+        <logger name="com.example.order_service" level="INFO"/>
+        <root level="INFO">
+            <appender-ref ref="JSON_CONSOLE"/>
+        </root>
+    </springProfile>
+
+</configuration>

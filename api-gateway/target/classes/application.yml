@@ -1,0 +1,99 @@
+spring:
+  application:
+    name: api-gateway
+
+  # ─── Config Client ──────────────────────────────────────────────────────────
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+  # ─── Spring Cloud Gateway — Route Definitions ────────────────────────────────
+  cloud:
+    gateway:
+      # Discovery: automatically creates routes for all Eureka-registered services
+      # e.g. /product-service/** → product-service instances (disabled here; we define manually)
+      discovery:
+        locator:
+          enabled: false  # We define routes manually for full control
+
+      routes:
+        # ── Route 1: product-service ────────────────────────────────────────────
+        - id: product-service-route
+          # lb:// = load-balanced — Spring Cloud LoadBalancer resolves "product-service"
+          # from Eureka registry to a real host:port
+          uri: lb://product-service
+          predicates:
+            # Match any request whose path starts with /api/products
+            - Path=/api/products/**
+          filters:
+            # Add X-Response-Time header to every response (custom timing header)
+            - AddResponseHeader=X-Gateway-Routed-By, api-gateway
+            # Retry on 5xx errors (not on 4xx — those are client mistakes)
+            - name: Retry
+              args:
+                retries: 2
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET
+
+        # ── Route 2: order-service ──────────────────────────────────────────────
+        - id: order-service-route
+          uri: lb://order-service
+          predicates:
+            - Path=/api/orders/**
+          filters:
+            - AddResponseHeader=X-Gateway-Routed-By, api-gateway
+
+        # ── Route 3: product-service Swagger UI ────────────────────────────────
+        - id: product-service-swagger
+          uri: lb://product-service
+          predicates:
+            - Path=/product-service/v3/api-docs
+          filters:
+            - RewritePath=/product-service/(?<segment>.*), /${segment}
+
+        # ── Route 4: order-service Swagger UI ──────────────────────────────────
+        - id: order-service-swagger
+          uri: lb://order-service
+          predicates:
+            - Path=/order-service/v3/api-docs
+          filters:
+            - RewritePath=/order-service/(?<segment>.*), /${segment}
+
+server:
+  port: 8080   # All client traffic comes in here
+
+# ─── Eureka Client ────────────────────────────────────────────────────────────
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+
+# ─── Actuator ─────────────────────────────────────────────────────────────────
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true   # Enables /actuator/gateway/routes to list all routes
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: api-gateway
+    description: Single entry point — routes traffic to product-service and order-service
+
+# ─── Logging ──────────────────────────────────────────────────────────────────
+logging:
+  level:
+    com.example.api_gateway: DEBUG
+    org.springframework.cloud.gateway: INFO
