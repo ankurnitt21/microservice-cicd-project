@@ -24,11 +24,16 @@ pipeline {
             steps {
                 sh '''
                 echo "Current workspace: ${WORKSPACE}"
-                docker run --rm \
-                    -v "${WORKSPACE}/eureka-server":/app \
-                    -w /app \
-                    maven:3.9.9-eclipse-temurin-17 \
-                    mvn clean package -DskipTests
+                echo "Building eureka-server with Maven using tar copy method..."
+                cd ${WORKSPACE}/eureka-server
+                tar -czf - . | docker run --rm -i maven:3.9.9-eclipse-temurin-17 bash -c "
+                    set -e
+                    mkdir -p /workspace
+                    cd /workspace
+                    tar -xzf -
+                    mvn clean package -DskipTests 1>&2
+                    tar -czf - target/
+                " | tar -xzf - -C ${WORKSPACE}/eureka-server/
                 echo "Maven build completed. Checking for JAR file..."
                 ls -lh ${WORKSPACE}/eureka-server/target/*.jar || echo "JAR file not found"
                 '''
