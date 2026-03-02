@@ -1,0 +1,95 @@
+pipeline {
+
+    agent any
+
+    environment {
+        IMAGE_NAME = "eureka-server"
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build (Maven)') {
+            when {
+                changeset "eureka-server/**"
+            }
+            steps {
+                sh '''
+                echo "Current workspace: ${WORKSPACE}"
+                docker run --rm \
+                    -v "${WORKSPACE}/eureka-server":/app \
+                    -w /app \
+                    maven:3.9.9-eclipse-temurin-17 \
+                    mvn clean package -DskipTests
+                echo "Maven build completed. Checking for JAR file..."
+                ls -lh ${WORKSPACE}/eureka-server/target/*.jar || echo "JAR file not found"
+                '''
+            }
+        }
+
+        stage('Build Docker Image') {
+            when {
+                changeset "eureka-server/**"
+            }
+            steps {
+                sh '''
+                docker build -t $IMAGE_NAME:latest ./eureka-server
+                '''
+            }
+        }
+
+        stage('Deploy to TEST') {
+            when {
+                allOf {
+                    branch 'develop'
+                    changeset "eureka-server/**"
+                }
+            }
+            steps {
+                sh '''
+                docker stop eureka-test || true
+                docker rm eureka-test || true
+                docker run -d -p 8761:8761 --name eureka-test $IMAGE_NAME:latest
+                '''
+            }
+        }
+
+        stage('Deploy to STAGING') {
+            when {
+                allOf {
+                    branch pattern: "release/.*", comparator: "REGEXP"
+                    changeset "eureka-server/**"
+                }
+            }
+            steps {
+                sh '''
+                docker stop eureka-staging || true
+                docker rm eureka-staging || true
+                docker run -d -p 8762:8761 --name eureka-staging $IMAGE_NAME:latest
+                '''
+            }
+        }
+
+        stage('Deploy to PRODUCTION') {
+            when {
+                allOf {
+                    branch 'main'
+                    changeset "eureka-server/**"
+                }
+            }
+            steps {
+                sh '''
+                docker stop eureka-prod || true
+                docker rm eureka-prod || true
+                docker run -d -p 8763:8761 --name eureka-prod $IMAGE_NAME:latest
+                '''
+            }
+        }
+
+    }
+}
